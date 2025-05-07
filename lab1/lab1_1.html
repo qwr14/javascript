@@ -44,7 +44,7 @@
             font-size: 16px;
         }
         button:hover {
-            background-color: #6c9be2;
+            background-color: #5297ac;
         }
         textarea {
             height: 100px;
@@ -56,12 +56,12 @@
     <h1>Пенсионный калькулятор</h1>
     <form id="pensionForm">
         <div>
-            <label for="age">Ваш возраст:</label>
+            <label for="age">Ваш возраст:*</label>
             <input type="number" id="age" name="age" min="0" required>
         </div>
         
         <div>
-            <label>Ваш пол:</label>
+            <label>Ваш пол:*</label>
             <div class="radio-group">
                 <div class="radio-option">
                     <input type="radio" id="male" name="gender" value="male" checked>
@@ -74,7 +74,7 @@
             </div>
         </div>
         
-        <button type="button" id="calculateBtn">Рассчитать</button>
+        <button type="submit" id="calculateBtn">Рассчитать</button>
         
         <div>
             <label for="result">Результат:</label>
@@ -101,6 +101,8 @@
                     message = "Скоро пенсия!";
                 } else if (age >= 65) {
                     message = "Вам пора на пенсию";
+                } else if (age ==NaN) {
+                    message = "";
                 }
             } else if (gender === 'female') {
                 if (age >= 18 && age <= 54) {
@@ -109,6 +111,8 @@
                     message = "Скоро пенсия!";
                 } else if (age >= 60) {
                     message = "Вам пора на пенсию";
+                } else if (age == NaN) {
+                    message = "";
                 }
             }
             
