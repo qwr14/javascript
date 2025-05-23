@@ -52,7 +52,7 @@ export function truncate(str, maxlength) {
  * @returns {string}
  */
 export function camelize(str) {
-    return str.split(/[-_]+/).map((word, index) => {
+    return str.split(/[-]+/).map((word, index) => {
         if (index === 0) {
             return word;
         }
