@@ -12,10 +12,9 @@
             this.price = price;
             
             this.show = function() {
-                console.log(`Название: ${this.title}, Цена: ${this.price}`);
+                console.log(`Название: ${this.title}, Цена: ${this.price} руб., Год выпуска: ${this.pubYear}`);
             };
         }
-        
         const book = new Book("Черепаха на песке", 2004, 999);
         book.show();
     </script>

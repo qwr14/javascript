@@ -4,6 +4,7 @@
     <title>Задание 2</title>
 </head>
 <body>
+    <p>Проверьте консоль</p>
     <script>
         function Book(title, pubYear, price) {
             let _title = title;
@@ -45,13 +46,13 @@
         }
         
         const book = new Book("Черепаха на песке", 2004, 999);
-        console.log(book.title, book.pubYear, book.price);
-        
+        console.log(`Название: ${book.title}, Цена: ${book.price} руб., Год выпуска: ${book.pubYear}`);
+
         book.title = "New Title";
         book.pubYear = 2024;
         book.price = 1000;
         
-        console.log(book.title, book.pubYear, book.price);
+        console.log(`Название: ${book.title}, Цена: ${book.price} руб., Год выпуска: ${book.pubYear}`);
         
         book.title = ""; // Ошибка
         book.pubYear = -1; // Ошибка
