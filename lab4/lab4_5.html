@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задание 5</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            className: 'open menu',
+            
+            addClass(cls) {
+                const classes = this.className.split(' ');
+                if (!classes.includes(cls)) {
+                    classes.push(cls);
+                    this.className = classes.join(' ').trim();
+                }
+                return this;
+            },
+            
+            removeClass(cls) {
+                const classes = this.className.split(' ');
+                const index = classes.indexOf(cls);
+                if (index !== -1) {
+                    classes.splice(index, 1);
+                    this.className = classes.join(' ').trim();
+                }
+                return this;
+            }
+        };
+        
+        console.log(obj.addClass('new').className);
+        console.log(obj.removeClass('open').className); 
+    </script>
+</body>
+</html>

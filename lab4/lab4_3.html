@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задание 3</title>
+</head>
+<body>
+    <script>
+        function Book(title, pubYear, price) {
+            this.title = title;
+            this.pubYear = pubYear;
+            this.price = price;
+        }
+        
+        Book.compare = function(a, b) {
+            return a.pubYear - b.pubYear;
+        };
+        
+        const books = [
+            new Book("Как раскрасить стул", 2000, 580),
+            new Book("Бумага А4 рецепт вкусных чипс", 2065, 10000),
+            new Book("Секрет идеальных рук", 2010, 759.99)
+        ];
+        
+        books.sort(Book.compare);
+        console.log(books);
+    </script>
+</body>
+</html>

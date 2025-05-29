@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задание 1</title>
+</head>
+<body>
+    <p>Проверьте консоль</p>
+    <script>
+        function Book(title, pubYear, price) {
+            this.title = title;
+            this.pubYear = pubYear;
+            this.price = price;
+            
+            this.show = function() {
+                console.log(`Название: ${this.title}, Цена: ${this.price}`);
+            };
+        }
+        
+        const book = new Book("Черепаха на песке", 2004, 999);
+        book.show();
+    </script>
+</body>
+</html>

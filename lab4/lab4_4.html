@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задание 4</title>
+</head>
+<body>
+    <script>
+        function isEmpty(obj) {
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) return false;
+            }
+            return Object.getOwnPropertySymbols(obj).length === 0;
+        }
+        
+        const obj = { [Symbol()]: true };
+        console.log(isEmpty(obj));
+        
+        const emptyObj = {};
+        console.log(isEmpty(emptyObj));
+    </script>
+</body>
+</html>
